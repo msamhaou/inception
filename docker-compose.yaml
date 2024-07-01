@@ -12,7 +12,7 @@ services:
       - mariadb
     networks:
       - inception
-    build: wordpress
+    build: ./src/wordpress
     volumes:
       - wp:/var/www/wordpress
     restart: always
@@ -22,7 +22,7 @@ services:
       - .env
     networks:
       - inception
-    build: mariadb
+    build: ./src/mariadb
     image: mariadb
     restart: always
   nginx:
@@ -33,7 +33,7 @@ services:
     container_name: nginx
     volumes:
       - wp:/var/www/wordpress
-    build: nginx
+    build: ./src/nginx
     image: nginx
     networks:
       - inception
