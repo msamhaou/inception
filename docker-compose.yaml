@@ -2,7 +2,7 @@
 services:
   wordpress:
     container_name: wordpress
-    image: wordpress
+    image: wordpress:msamhaou
     expose:
       - "9000"
     env_file:
@@ -22,7 +22,7 @@ services:
     networks:
       - inception
     build: ./src/mariadb
-    image: mariadb
+    image: mariadb:msamhaou
     restart: always
   nginx:
     ports:
@@ -33,7 +33,7 @@ services:
     volumes:
       - wp:/var/www/wordpress
     build: ./src/nginx
-    image: nginx
+    image: nginx:msamhaou
     networks:
       - inception
     env_file:
