@@ -50,6 +50,6 @@ volumes:
   wp:
     driver: local
     driver_opts:
-      device: "/home/msamhaou/wp"
+      device: "/home/msamhaou/data"
       type: none
       o: bind
