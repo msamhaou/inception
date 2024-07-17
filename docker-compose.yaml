@@ -1,4 +1,3 @@
-version: '3.8'
 
 services:
   wordpress:
@@ -50,6 +49,6 @@ volumes:
   wp:
     driver: local
     driver_opts:
-      device: "/home/msamhaou/data"
+      device: "/home/msamhaou/data/"
       type: none
       o: bind
